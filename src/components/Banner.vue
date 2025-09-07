@@ -10,14 +10,14 @@
 
     <div class="w-full flex flex-col lg:flex-row items-center justify-center p-4 md:p-8 lg:p-16 gap-8 lg:gap-0">
       <div class="w-full lg:w-[50%] relative flex justify-center lg:justify-start">
-        <img :src="Speaker" alt="" class="relative lg:absolute lg:-top-38 lg:-left-20 w-[50%] md:w-[40%] lg:w-[75%]" />
+        <img :src="Speaker" alt="" class="relative lg:absolute lg:-top-42 lg:-left-12 w-[50%] md:w-[40%] lg:w-[75%]" />
       </div>
       <div class="flex flex-col items-center lg:items-start gap-4 md:gap-6 text-center lg:text-left">
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase text-white tracking-widest">
           ZX9 <br />
           SPEAKER
         </h1>
-        <p class="text-sm md:text-[15px] font-medium text-white/75 max-w-sm lg:max-w-none">
+        <p class="text-sm md:text-[15px] font-medium text-white/75 max-w-sm lg:max-w-sm">
           Upgrade to premium speakers that are 
           phenomenally built to deliver truly remarkable 
           sound.
