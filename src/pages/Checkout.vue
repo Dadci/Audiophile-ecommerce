@@ -158,7 +158,7 @@
 
     <!-- Order Success Modal -->
     <Transition name="modal">
-      <div v-if="showOrderModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+      <div v-if="showOrderModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
         <OrderSuccess :order-items="orderItems" :grand-total="grandTotal" @close="closeModal"
           @back-to-home="backToHome" />
       </div>

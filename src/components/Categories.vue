@@ -1,12 +1,8 @@
 <template>
-  <div class="pt-30 flex flex-row items-center justify-end w-full gap-8">
-    <CategoryCard
-      v-for="category in categories"
-      :key="category.id"
-      :CategoryImage="category.image"
-      :CategoryName="category.name"
-      @navigate="navigateToCategory(category.route)"
-    />
+  <div
+    class="pt-16 md:pt-20 lg:pt-30 flex flex-col md:flex-row items-center justify-center w-full gap-4 md:gap-6 lg:gap-8">
+    <CategoryCard v-for="category in categories" :key="category.id" :CategoryImage="category.image"
+      :CategoryName="category.name" @navigate="navigateToCategory(category.route)" class="w-full md:w-1/3" />
   </div>
 </template>
 
