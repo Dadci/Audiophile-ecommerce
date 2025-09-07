@@ -1,33 +1,40 @@
 <template>
   <nav
-    class="w-full h-16 md:h-24 flex items-center justify-between py-4 md:py-8 px-6 md:px-20 lg:px-40 bg-[#131313] relative after:content-[''] after:absolute after:bottom-0 after:left-6 after:right-6 md:after:left-20 md:after:right-20 lg:after:left-40 lg:after:right-40 after:h-px after:bg-white/15">
-    <router-link to="/">
-      <img :src="Logo" alt="Logo" class="w-24 md:w-auto" />
-    </router-link>
+    class="w-full h-20 md:h-24 flex items-center py-4 md:py-8 px-6 md:px-20 lg:px-40 bg-[#131313] border-b border-white/15 relative md:after:left-20 md:after:right-20 lg:after:left-40 lg:after:right-40 after:h-px after:bg-white/15">
 
-    <!-- Mobile menu button -->
+    <!-- Mobile hamburger menu - Left side -->
     <button @click="toggleMobileMenu" class="md:hidden text-white p-2" aria-label="Toggle menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
 
-    <!-- Desktop navigation -->
-    <ul class="hidden md:flex space-x-4 lg:space-x-8 uppercase font-bold text-xs lg:text-[13px] cursor-pointer">
-      <li>
-        <router-link to="/" class="text-white hover:text-[#D87D4A]">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/headphones" class="text-white hover:text-[#D87D4A]">HEADPHONES</router-link>
-      </li>
-      <li>
-        <router-link to="/speakers" class="text-white hover:text-[#D87D4A]">SPEAKERS</router-link>
-      </li>
-      <li>
-        <router-link to="/earphones" class="text-white hover:text-[#D87D4A]">EARPHONES</router-link>
-      </li>
-    </ul>
+    <!-- Logo - Center on mobile, left on desktop -->
+    <div class="flex-1 md:flex-none flex justify-center md:justify-start">
+      <router-link to="/">
+        <img :src="Logo" alt="Logo" class="w-32 md:w-auto" />
+      </router-link>
+    </div>
 
+    <!-- Desktop navigation - Center -->
+    <div class="hidden md:flex flex-1 justify-center">
+      <ul class="flex space-x-4 lg:space-x-8 uppercase font-bold text-xs lg:text-[13px] cursor-pointer">
+        <li>
+          <router-link to="/" class="text-white hover:text-[#D87D4A]">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/headphones" class="text-white hover:text-[#D87D4A]">HEADPHONES</router-link>
+        </li>
+        <li>
+          <router-link to="/speakers" class="text-white hover:text-[#D87D4A]">SPEAKERS</router-link>
+        </li>
+        <li>
+          <router-link to="/earphones" class="text-white hover:text-[#D87D4A]">EARPHONES</router-link>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cart - Right side -->
     <div class="relative">
       <img :src="CartIcon" alt="Cart Icon" class="cursor-pointer hover:opacity-75 transition-opacity w-5 md:w-auto"
         @click="toggleCart" />

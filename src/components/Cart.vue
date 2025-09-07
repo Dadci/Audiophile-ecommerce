@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-6 items-center justify-center bg-white rounded-lg w-[400px] p-8 shadow-lg">
+    <div class="flex flex-col gap-6 items-center justify-center bg-white rounded-lg w-[350px] md:w-[400px] p-6 md:p-8 shadow-lg">
         <div class="w-full flex items-center justify-between">
             <h2 class="text-black font-bold text-xl uppercase tracking-wider">
                 Cart ({{ cartStore.totalItems }})

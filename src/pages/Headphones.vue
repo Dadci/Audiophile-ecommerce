@@ -1,10 +1,10 @@
 <template>
   <div
-    class="w-full flex items-center justify-center py-24 bg-[#131313] text-white mb-40"
+    class="w-full flex items-center justify-center py-16 md:py-20 lg:py-24 bg-[#131313] text-white mb-16 md:mb-24 lg:mb-40"
   >
-    <h1 class="text-4xl font-bold uppercase">Headphones</h1>
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold uppercase">Headphones</h1>
   </div>
-  <div class="px-40 flex flex-col gap-32 mb-40">
+  <div class="px-6 md:px-20 lg:px-40 flex flex-col gap-16 md:gap-24 lg:gap-32 mb-16 md:mb-24 lg:mb-40">
     <ProductCard
       v-for="(product, index) in headphones"
       :key="product.id"
