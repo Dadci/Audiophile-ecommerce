@@ -9,25 +9,28 @@
 <script setup>
 import { useRouter } from "vue-router";
 import CategoryCard from "./CategoryCard.vue";
+import headphonesImage from "../assets/shared/desktop/image-category-thumbnail-headphones.png";
+import speakersImage from "../assets/shared/desktop/image-category-thumbnail-speakers.png";
+import earphonesImage from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
 
 const router = useRouter();
 
 const categories = [
   {
     id: 1,
-    image: "/src/assets/shared/desktop/image-category-thumbnail-headphones.png",
+    image: headphonesImage,
     name: "HEADPHONES",
     route: "/headphones",
   },
   {
     id: 2,
-    image: "/src/assets/shared/desktop/image-category-thumbnail-speakers.png",
+    image: speakersImage,
     name: "SPEAKERS",
     route: "/speakers",
   },
   {
     id: 3,
-    image: "/src/assets/shared/desktop/image-category-thumbnail-earphones.png",
+    image: earphonesImage,
     name: "EARPHONES",
     route: "/earphones",
   },

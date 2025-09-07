@@ -1,5 +1,6 @@
 <template>
-  <p class="text-sm font-normal text-gray-500 cursor-pointer px-6 md:px-20 lg:px-40 pt-12 md:pt-16 pb-10 md:pb-14" @click="goBack">
+  <p class="text-sm font-normal text-gray-500 cursor-pointer px-6 md:px-20 lg:px-40 pt-12 md:pt-16 pb-10 md:pb-14"
+    @click="goBack">
     &lt; Go back
   </p>
   <div class="px-6 md:px-20 lg:px-40 flex flex-col gap-16 md:gap-24 lg:gap-32 mb-16 md:mb-24 lg:mb-40" v-if="product">
@@ -60,7 +61,8 @@
           In the box
         </h1>
         <ul class="space-y-2">
-          <li v-for="item in product.includes" :key="item.item" class="text-gray-500 text-sm md:text-[15px] font-normal leading-7">
+          <li v-for="item in product.includes" :key="item.item"
+            class="text-gray-500 text-sm md:text-[15px] font-normal leading-7">
             <span class="text-[#D87D4A] font-bold pr-6">{{ item.quantity }}x</span>
             {{ item.item }}
           </li>
@@ -115,8 +117,10 @@ const product = computed(() => {
   return getProductBySlug(route.params.slug);
 });
 
+import { getAssetPath } from '../utils/assetImports.js';
+
 const getImagePath = (path) => {
-  return path.replace("./", "/src/");
+  return getAssetPath(path);
 };
 
 const goBack = () => {

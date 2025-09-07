@@ -32,8 +32,10 @@ const props = defineProps({
 
 const emit = defineEmits(['update-quantity', 'remove-item']);
 
+import { getAssetPath } from '../utils/assetImports.js';
+
 const getImagePath = (path) => {
-    return path.replace("./", "/src/");
+    return getAssetPath(path);
 };
 
 const getShortName = (name) => {
